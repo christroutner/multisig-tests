@@ -1,0 +1,15 @@
+{
+  "name": "@chris.troutner/multisig-tests",
+  "version": "1.0.0",
+  "description": "Examples for working with BCH multisig transactions and bitore-lib-cash library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chris Troutner <chris.troutner@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@psf/bch-js": "6.4.5",
+    "bitcore-lib-cash": "8.25.31"
+  }
+}
