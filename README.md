@@ -5,6 +5,9 @@ This is a series of example programs for working with multisig transactions, usi
 - [01-create-ms-wallet.js](./01-create-ms-wallet.js) - Generate a 2-of-3 multisig wallet.
 - [02-spend-ms-wallet.js](./02-spend-ms-wallet.js) - Spend from the wallet when all private keys are known.
 - [03-round-robin-signing.js](./03-round-robin-signing.js) - Bob passes a partially signed Tx to Alice. Alice signs and broadcasts the transaction.
+- [04-create-3-of-5.js](./04-create-3-of-5.js) - Create a 3-of-5 multisignature address.
+- [05-round-robin-signing.js](./05-round-robin-signing.js) - Example for signing the multisig transaction by passing the partially signed transaction to each participant in-series. They each add their signature then pass it on to the next player.
+- [06-parallel-signing.js](./06-parallel-signing.js) - Example for signing the multisig transaction in parallel. Each player signs their copy of the transaction and sends just the signature to an aggregator. The aggregator combines all signatures and broadcasts the transaction.
 
 ## Installation
 
