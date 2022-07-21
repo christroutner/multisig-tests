@@ -28,7 +28,7 @@ MIT
 ## Results
 The scripts in this repository was a series of experiments to see how best to approach work with multisignature transactions. The purpose is to create a 'Minting Council' that controls the minting of new tokens for an organization. This idea is based on the organizational structure laid out at [PSFoundation.info](https://psfoundation.info). Based on the results of these experiments, I envision a protocol as follows.
 
-1. Holders of the NFT are responsible for ensure they've made a transaction so that their public key is visible on the blockchain. Otherwise they can not be included in a multisig transaction. NFTs can be passed to new addresses, but that address must have made at least one transaction so that its public key is exposed on the blockchain.
+1. Holders of the NFT are responsible for ensuring they've made a transaction so that their public key is visible on the blockchain. Otherwise they can not be included in a multisig transaction. NFTs can be passed to new addresses, but that address must have made at least one transaction so that its public key is exposed on the blockchain.
 
 2. A member of the Management generates a multisig transaction at the direction of the VIP membership. The on-chain public addresses for each NFT is used in the creation of the transaction. Each transaction requires a 50%+ threshold. The transaction information is uploaded to the P2WDB in JSON format.
 	- This requires a way to look up the public key for any address holding an NFT. That will require a modification to psf-slp-indexer or a special program to extract the data.
