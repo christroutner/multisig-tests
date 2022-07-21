@@ -31,16 +31,16 @@ The scripts in this repository was a series of experiments to see how best to ap
 1. Holders of the NFT are responsible for ensure they've made a transaction so that their public key is visible on the blockchain. Otherwise they can not be included in a multisig transaction. NFTs can be passed to new addresses, but that address must have made at least one transaction so that its public key is exposed on the blockchain.
 
 2. A member of the Management generates a multisig transaction at the direction of the VIP membership. The on-chain public addresses for each NFT is used in the creation of the transaction. Each transaction requires a 50%+ threshold. The transaction information is uploaded to the P2WDB in JSON format.
-	a. This requires a way to look up the public key for any address holding an NFT. That will require a modification to psf-slp-indexer or a special program to extract the data.
+	- This requires a way to look up the public key for any address holding an NFT. That will require a modification to psf-slp-indexer or a special program to extract the data.
 
 3. The Management contacts each member of the Minting Council using e2e encrypted messaging, to let them know the transaction exists and the P2WDB hash for retrieving it.
 
 4. Each member of the Minting Council issues a command that does the following:
-	a. It downloads the multisig transaction from the P2WDB.
-	b. It signs the transaction.
-	c. It sends the signature to the Management via e2e encrypted messaging.
-  
+	- It downloads the multisig transaction from the P2WDB.
+	- It signs the transaction.
+	- It sends the signature to the Management via e2e encrypted messaging.
+
 5. The Managment runs a command that:
-	a. Checks for new e2ee messages with signatures attached.
-	b. Attempts to collect enough signatures to meet the signature threshold.
-	c. Broadcasts the transaction if enough signatures are found.
+	- Checks for new e2ee messages with signatures attached.
+	- Attempts to collect enough signatures to meet the signature threshold.
+	- Broadcasts the transaction if enough signatures are found.
